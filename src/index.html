@@ -7,7 +7,7 @@
     <title>DMS</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased">
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-50 antialiased">
 
     <div class="bg-cesnetblue text-white font-semibold text-lg">
         <p class="p-2 text-center">Preferujte přihlášení přes <a class="underline" href="#">SAML</a>!</p>
@@ -16,21 +16,22 @@
     <div class="p-4 max-w-md mx-auto">
 
         <div class="flex items-center justify-center">
-            <img class="h-32" src="./img/cesnet-logo.svg" alt="CESNET - logo">
+            <img class="h-32 dark:hidden" src="./img/cesnet-logo.svg" alt="CESNET - logo">
+            <img class="h-32 hidden dark:inline-block" src="./img/cesnet-logo-negativ.svg" alt="CESNET - logo">
         </div>
 
-        <h1 class="text-2xl text-darkgrey font-bold pb-4">Přihlášení k DMS</h1>
+        <h1 class="text-2xl text-darkgrey dark:text-lightgrey font-bold pb-4">Přihlášení k DMS</h1>
 
         <form class="flex flex-col gap-y-4" action="#" method="post">
 
             <div class="flex flex-col">
-                <label class="text-sm text-darkgrey" for="name">Přihlašovací jméno:</label>
-                <input class="placeholder:text-sm placeholder:text-lightgrey focus:ring-freshblue rounded shadow-md" type="text" name="name" id="name" placeholder="Zadejte jméno" required>
+                <label class="text-sm text-darkgrey dark:text-lightgrey" for="name">Přihlašovací jméno:</label>
+                <input class="dark:bg-gray-600 placeholder:text-sm placeholder:text-lightgrey focus:ring-freshblue rounded shadow-md" type="text" name="name" id="name" placeholder="Zadejte jméno" required>
             </div>
 
             <div class="flex flex-col">
-                <label class="text-sm text-darkgrey" for="password">Heslo:</label>
-                <input class="placeholder:text-sm placeholder:text-lightgrey focus:ring-freshblue rounded shadow-md" type="password" name="password" id="password" placeholder="Zadejte heslo" required>
+                <label class="text-sm text-darkgrey dark:text-lightgrey" for="password">Heslo:</label>
+                <input class="dark:bg-gray-600 placeholder:text-sm placeholder:text-lightgrey focus:ring-freshblue rounded shadow-md" type="password" name="password" id="password" placeholder="Zadejte heslo" required>
             </div>
 
             <div class="flex flex-col gap-y-4 text-center">
