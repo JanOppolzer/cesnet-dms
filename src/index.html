@@ -10,19 +10,23 @@
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-50 antialiased">
 
     <div class="bg-cesnetblue text-white font-semibold text-lg">
-        <p class="p-2 text-center">Preferujte přihlášení přes <a class="underline" href="#">SAML</a>!</p>
+        <p class="p-2 text-center">Preferujte přihlášení přes <a class="underline" href="#">eduID.cz</a>!</p>
     </div>
 
     <div class="p-4 max-w-md mx-auto">
 
         <div class="flex items-center justify-center">
-            <img class="h-32 dark:hidden" src="./img/cesnet-logo.svg" alt="CESNET - logo">
-            <img class="h-32 hidden dark:inline-block" src="./img/cesnet-logo-negativ.svg" alt="CESNET - logo">
+            <img class="h-24 dark:hidden" src="./img/cesnet-logo.svg" alt="CESNET - logo">
+            <img class="h-24 hidden dark:inline-block" src="./img/cesnet-logo-negativ.svg" alt="CESNET - logo">
         </div>
 
-        <h1 class="text-2xl text-darkgrey dark:text-lightgrey font-bold pb-4">Přihlášení k DMS</h1>
+        <h1 class="pb-0 text-2xl text-darkgrey dark:text-lightgrey font-bold">Přihlášení k DMS</h1>
 
-        <form class="flex flex-col gap-y-4" action="#" method="post">
+        <div class="my-4 flex flex-col text-center">
+            <a class="px-4 py-2 bg-cesnetblue text-blue-50 font-bold rounded shadow-sm shadow-sky-100" href="#">Přihlášení přes eduID.cz</a>
+        </div>
+
+        <form class="p-4 bg-gray-200 dark:bg-gray-700 flex flex-col gap-y-4 border-2 dark:border-gray-500 rounded-md shadow-md" action="#" method="post">
 
             <div class="flex flex-col">
                 <label class="text-sm text-darkgrey dark:text-lightgrey" for="name">Přihlašovací jméno:</label>
@@ -34,14 +38,13 @@
                 <input class="dark:bg-gray-600 placeholder:text-sm placeholder:text-lightgrey focus:ring-freshblue rounded shadow-md" type="password" name="password" id="password" placeholder="Zadejte heslo" required>
             </div>
 
-            <div class="flex flex-col gap-y-4 text-center">
-                <button class="px-4 py-2 bg-cesnetblue hover:shadow-cesnetblue text-blue-50 rounded shadow-sm" type="submit">Přihlásit</button>
-                <a class="px-4 py-2 bg-sky-300 text-sky-700 hover:shadow-sky-200 font-bold rounded shadow-sm shadow-sky-100" href="#">Přesměrovat na SAML</a>
+            <div class="mt-5 flex flex-col">
+                <button class="px-4 py-2 bg-freshblue text-sky-50 rounded shadow-sm" type="submit">Lokální přihlášení</button>
             </div>
 
         </form>
 
-        <hr class="my-3 text-gray-300">
+        <hr class="my-4 border-gray-300 dark:border-gray-500">
 
         <p class="text-center text-sm text-lightgrey">
             <a class="font-semibold hover:underline" href="#">Zapomenuté heslo?</a>
