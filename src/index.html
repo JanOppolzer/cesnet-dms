@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DMS</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="./js/app.js" defer></script>
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-50 antialiased">
 
-    <div class="bg-cesnetblue text-white font-semibold text-lg">
+    <div class="bg-freshblue text-white font-semibold text-lg">
         <p class="p-2 text-center">Preferujte přihlášení přes <a class="underline" href="#">eduID.cz</a>!</p>
     </div>
 
-    <div class="p-4 max-w-md mx-auto">
+    <div x-data="{ open: false }" class="p-4 max-w-md mx-auto">
 
         <div class="flex items-center justify-center">
             <img class="h-24 dark:hidden" src="./img/cesnet-logo.svg" alt="CESNET - logo">
@@ -22,33 +23,38 @@
 
         <h1 class="pb-0 text-2xl text-darkgrey dark:text-lightgrey font-bold">Přihlášení k DMS</h1>
 
-        <div class="my-4 flex flex-col text-center">
-            <a class="px-4 py-2 bg-cesnetblue text-blue-50 font-bold rounded shadow-sm shadow-sky-100" href="#">Přihlášení přes eduID.cz</a>
+        <div class="my-4 flex flex-col text-center gap-2">
+            <a class="px-4 py-2 bg-cesnetblue text-blue-50 font-bold text-lg rounded shadow-sm shadow-blue-100" href="#">Přihlášení přes eduID.cz</a>
+            <button @click="open = !open" class="px-4 py-2 bg-lightgrey dark:bg-darkgrey text-blue-50 text-sm rounded shadow-sm">Lokální přihlášení</button>
         </div>
 
-        <form class="p-4 bg-gray-200 dark:bg-gray-700 flex flex-col gap-y-4 border-2 dark:border-gray-500 rounded-md shadow-md" action="#" method="post">
+        <div x-show="open" class="p-4 bg-gray-200 dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-500 rounded-md shadow-md">
 
-            <div class="flex flex-col">
-                <label class="text-sm text-darkgrey dark:text-lightgrey" for="name">Přihlašovací jméno:</label>
-                <input class="dark:bg-gray-600 placeholder:text-sm placeholder:text-lightgrey focus:ring-freshblue rounded shadow-md" type="text" name="name" id="name" placeholder="Zadejte jméno" required>
-            </div>
+            <p class="mb-4 p-4 font-semibold bg-lightgrey dark:bg-darkgrey text-darkgrey dark:text-lightgrey rounded">Chystáte se použít <strong>lokální</strong> přihlášení, nikoliv preferované přihlášení přes eduID.cz!</p>
 
-            <div class="flex flex-col">
-                <label class="text-sm text-darkgrey dark:text-lightgrey" for="password">Heslo:</label>
-                <input class="dark:bg-gray-600 placeholder:text-sm placeholder:text-lightgrey focus:ring-freshblue rounded shadow-md" type="password" name="password" id="password" placeholder="Zadejte heslo" required>
-            </div>
+            <hr class="my-4 border-gray-300 dark:border-gray-500">
 
-            <div class="mt-5 flex flex-col">
-                <button class="px-4 py-2 bg-freshblue text-sky-50 rounded shadow-sm" type="submit">Lokální přihlášení</button>
-            </div>
+            <form class="flex flex-col gap-y-4" action="#" method="post">
+                <div class="flex flex-col">
+                    <label class="text-sm text-darkgrey dark:text-lightgrey" for="name">Přihlašovací jméno:</label>
+                    <input class="dark:bg-gray-600 placeholder:text-sm placeholder:text-lightgrey focus:ring-freshblue rounded shadow-md" type="text" name="name" id="name" placeholder="Zadejte jméno" required>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-sm text-darkgrey dark:text-lightgrey" for="password">Heslo:</label>
+                    <input class="dark:bg-gray-600 placeholder:text-sm placeholder:text-lightgrey focus:ring-freshblue rounded shadow-md" type="password" name="password" id="password" placeholder="Zadejte heslo" required>
+                </div>
+                <div class="mt-5 flex flex-col">
+                    <button class="px-4 py-2 bg-cesnetblue text-blue-50 rounded shadow-sm" type="submit">Přihlásit</button>
+                </div>
+            </form>
 
-        </form>
+            <hr class="my-4 border-gray-300 dark:border-gray-500">
 
-        <hr class="my-4 border-gray-300 dark:border-gray-500">
+            <p class="text-center text-sm text-lightgrey">
+                <a class="font-semibold hover:underline" href="#">Zapomenuté heslo?</a>
+            </p>
 
-        <p class="text-center text-sm text-lightgrey">
-            <a class="font-semibold hover:underline" href="#">Zapomenuté heslo?</a>
-        </p>
+        </div>
 
     </div>
 

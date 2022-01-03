@@ -1,5 +1,6 @@
 {
-    "/dist/css/style.css": "/dist/css/style.css",
+    "/dist/js/app.js": "/dist/js/app.js",
+    "/dist/css/app.css": "/dist/css/app.css",
     "/dist/index.html": "/dist/index.html",
     "/dist/img/cesnet-logo-negativ.svg": "/dist/img/cesnet-logo-negativ.svg",
     "/dist/img/cesnet-logo.svg": "/dist/img/cesnet-logo.svg"
