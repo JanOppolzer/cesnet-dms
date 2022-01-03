@@ -10,11 +10,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-50 antialiased">
 
-    <div class="bg-freshblue text-white font-semibold text-lg">
-        <p class="p-2 text-center">Preferujte přihlášení přes <a class="underline" href="#">eduID.cz</a>!</p>
-    </div>
-
-    <div x-data="{ open: false }" class="p-4 max-w-md mx-auto">
+    <div x-data="{ open: false }" class="p-4 max-w-lg mx-auto">
 
         <div class="flex items-center justify-center">
             <img class="h-24 dark:hidden" src="./img/cesnet-logo.svg" alt="CESNET - logo">
@@ -24,13 +20,13 @@
         <h1 class="pb-0 text-2xl text-darkgrey dark:text-lightgrey font-bold">Přihlášení k DMS</h1>
 
         <div class="my-4 flex flex-col text-center gap-2">
-            <a class="px-4 py-2 bg-cesnetblue text-blue-50 font-bold text-lg rounded shadow-sm shadow-blue-100" href="#">Přihlášení přes eduID.cz</a>
-            <button @click="open = !open" class="px-4 py-2 bg-lightgrey dark:bg-darkgrey text-blue-50 text-sm rounded shadow-sm">Lokální přihlášení</button>
+            <a class="px-4 md:px-8 py-2 md:py-4 bg-cesnetblue text-blue-50 font-bold md:text-lg rounded" href="#">Přihlášení pro zaměstnance sdružení CESNET</a>
+            <button @click="open = !open" class="px-4 py-2 bg-lightgrey dark:bg-darkgrey text-blue-50 text-sm rounded">Lokální přihlášení</button>
         </div>
 
         <div x-show="open" x-transition.duration.500ms class="p-4 bg-gray-200 dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-500 rounded-md shadow-md">
 
-            <p class="mb-4 p-4 font-semibold bg-lightgrey dark:bg-darkgrey text-darkgrey dark:text-lightgrey rounded">Chystáte se použít <strong>lokální</strong> přihlášení, nikoliv preferované přihlášení přes eduID.cz!</p>
+            <p class="mb-4 p-4 font-semibold bg-lightgrey dark:bg-darkgrey text-darkgrey dark:text-lightgrey rounded">Chystáte se použít <strong>lokální</strong> přihlášení, nikoliv preferované přihlášení pro zaměstnance sdružení CESNET!</p>
 
             <hr class="my-4 border-gray-300 dark:border-gray-500">
 
