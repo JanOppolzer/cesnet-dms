@@ -21,7 +21,7 @@ npm run prod
 
 ## Náhled
 
-Jak vypadá vygenerovaná přihlašovací stránka si můžete prohlédnout na adrese [https://janoppolzer.github.io/cesnet-dms](janoppolzer.github.io/cesnet-dms).
+Jak vypadá vygenerovaná přihlašovací stránka si můžete prohlédnout na adrese [janoppolzer.github.io/cesnet-dms](https://janoppolzer.github.io/cesnet-dms).
 
 ## Kontakt
 
